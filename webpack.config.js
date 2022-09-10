@@ -20,7 +20,7 @@ const config  = {
         path: outputFile,
         filename: 'app.js',
         clean: true,
-        publicPath:'/'
+        publicPath:'./'
     },
     module: {
         rules: [
@@ -46,9 +46,9 @@ const config  = {
     plugins: [
         new CleanWebpackPlugin,
         new ESLintPlugin(),
-        // new HtmlWebpackPlugin({
-        //     template: path.resolve(__dirname, './dict/index.html'),
-        // }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, './src/index.html'),
+        }),
         new MiniCssExtractPlugin({
         }),
         new WebpackObfuscator(
