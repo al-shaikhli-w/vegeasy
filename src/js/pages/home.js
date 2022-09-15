@@ -4,7 +4,7 @@ const container = document.querySelector('.recipes');
 
 const renderRecipes = async (term) => {
     console.log(term);
-    let uri = 'https://what-do-i-eat-today-api.herokuapp.com/recipes?_sort=Name&_order=asc_limit=8';
+    let uri = 'https://what-do-i-eat-today-api.herokuapp.com/recipes?_sort=Name&_order=asc&_limit=8';
     if (term) {
         uri += `&q=${term}`
     }
