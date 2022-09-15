@@ -1,4 +1,5 @@
 import "./scss/main.scss";
 
-// index.js
+// import js files
+import "./js/index";
 

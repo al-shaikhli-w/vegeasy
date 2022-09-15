@@ -1,8 +1,12 @@
+// import base style
+@import "./base/base";
+// import global style
+@import "./base/global";
 
+// import utilities style
+@import "./utilities/utilities";
+// import the components styles
+@import "./components/pagination";
 
-$body-color: red;
-
-body {
-  height: 100vh;
-  background: red;
-}
+// import pages
+@import "./pages/home";

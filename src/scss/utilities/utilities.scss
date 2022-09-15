@@ -1,0 +1,22 @@
+.hidden {
+  display: none;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.grid{
+  display: grid;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  min-width: 10rem;
+  text-align: center;
+  &:hover{
+  text-decoration: none;
+  }
+}
