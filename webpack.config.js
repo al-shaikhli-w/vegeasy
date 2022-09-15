@@ -4,15 +4,12 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const WebpackObfuscator = require('webpack-obfuscator');
-
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 const isProduction = process.env.NODE_ENV === 'production';
 const entryFile = './src/index.js';
 const outputFile = path.resolve(__dirname, './dist');
-
-
 
 const config  = {
     entry: entryFile,
@@ -38,8 +35,12 @@ const config  = {
                 ],
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|ico)$/i,
                 type: 'asset',
+                loader: 'file-loader',
+                options: {
+                    name: 'image/[name].[ext]',
+                },
             },
         ],
     },
