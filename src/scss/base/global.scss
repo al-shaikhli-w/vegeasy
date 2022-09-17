@@ -10,6 +10,9 @@ body {
   background: $slate;
   color: $slate-50;
 }
+.main {
+  padding-top: 5rem;
+}
 
 a {
   color: inherit;
@@ -21,9 +24,40 @@ button {
   box-shadow: none;
   color: inherit;
 }
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  transition: .5s;
+  &__default{
+    border: 1px solid;
+    border-radius: 2rem;
+    padding: .7rem .5rem;
+  }
+&--delete {
+  background: $red;
+  color: $slate-50;
+  &:hover{
+    background: $slate-50;
+    color: $red;
+  }
+}
+  &--details{
+    background: $purple;
+    color: $slate-50;
+    &:hover{
+      background: $slate-50;
+      color: $purple;
+    }
+  }
+}
 
 .container {
   max-width: 90vw;
   margin: auto;
-  padding: 0 1rem;
+}
+/* Small (sm) */
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
 }

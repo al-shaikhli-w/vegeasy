@@ -11,24 +11,24 @@
     grid-template-rows: 1fr 2fr 1fr;
     grid-gap: 1rem;
     .recipe__title{
+      justify-content: space-between;
+      align-items: center;
+      height: 0;
+      margin: 1rem 0;
       h3{
         font-size: 1rem;
-        margin: 0 auto 5px;
         word-spacing: -5px;
+        text-align: left;
       }
-      &.vegan {
-        color: $green;
+      button svg {
+        text-align: right;
       }
     }
   }
   .recipe__footer{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    button{
-      flex: 1;
-      text-align: left;
-    }
+    justify-content: end;
+    align-items: end;
   }
 }
 

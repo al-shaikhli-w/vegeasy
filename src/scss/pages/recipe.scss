@@ -1,0 +1,8 @@
+.link-to-home-page {
+  margin-top: 2rem;
+  display: block;
+  transition: .5s;
+  &:hover {
+    color: $red;
+  }
+}

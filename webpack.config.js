@@ -10,6 +10,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const isProduction = process.env.NODE_ENV === 'production';
 const entryFile = './src/index.js';
 const outputFile = path.resolve(__dirname, './dist');
+let htmlPageNames = [ 'recipe'];
+let multipleHtmlPlugins = htmlPageNames.map(name => {
+    return new HtmlWebpackPlugin({
+        template: `./src/${name}.html`,
+        filename: `${name}.html`,
+        chunks: [`${name}`]
+    })
+});
 
 const config  = {
     entry: entryFile,
@@ -48,16 +56,17 @@ const config  = {
         new CleanWebpackPlugin,
         new ESLintPlugin(),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './src/index.html'),
+            hash: true,
+            template: path.resolve(__dirname, `./src/index.html`),
+            chunks: [`main`]
         }),
-        new MiniCssExtractPlugin({
-        }),
-        new WebpackObfuscator(
-            {
-                rotateStringArray: true,
-                reservedStrings: [ '\s*' ]
-            })
-    ],
+        new MiniCssExtractPlugin(),
+        // new WebpackObfuscator(
+        //     {
+        //         rotateStringArray: true,
+        //         reservedStrings: [ '\s*' ]
+        //     })
+    ].concat(multipleHtmlPlugins),
     resolve: {
         extensions: ['*', '.js']
     },

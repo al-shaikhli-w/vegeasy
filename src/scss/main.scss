@@ -6,7 +6,9 @@
 // import utilities style
 @import "./utilities/utilities";
 // import the components styles
-@import "./components/pagination";
+@import "./components/header";
 
 // import pages
 @import "./pages/home";
+@import "./pages/recipe";
+

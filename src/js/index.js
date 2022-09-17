@@ -1,2 +1,4 @@
-import "./pages/home"
-import "./components/pagination";
+import "./global";
+
+import "./pages/home";
+import "./pages/recipe";
