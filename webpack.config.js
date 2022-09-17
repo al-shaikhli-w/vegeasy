@@ -61,11 +61,11 @@ const config  = {
             chunks: [`main`]
         }),
         new MiniCssExtractPlugin(),
-        // new WebpackObfuscator(
-        //     {
-        //         rotateStringArray: true,
-        //         reservedStrings: [ '\s*' ]
-        //     })
+        new WebpackObfuscator(
+            {
+                rotateStringArray: true,
+                reservedStrings: [ '\s*' ]
+            })
     ].concat(multipleHtmlPlugins),
     resolve: {
         extensions: ['*', '.js']
