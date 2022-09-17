@@ -32,7 +32,7 @@ const renderRecipes = async (term) => {
             <p>${sliceDescription}...</p>
         </main>
         <footer class="recipe__footer">
-            <a class="btn btn__default btn--details" href="/recipe.html?id=${recipe.id}" target="_self">Details</a>
+            <a class="btn btn__default btn--details" href="${window.location}/recipe.html?id=${recipe.id}" target="_self">Details</a>
         </footer>
       </article>
     `

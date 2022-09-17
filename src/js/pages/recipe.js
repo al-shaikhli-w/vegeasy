@@ -1,15 +1,14 @@
 const getLocationId = new URLSearchParams(window.location.search).get('id');
-const deleteBtn = document.querySelector('#delete');
+console.log("in recipe.html text")
 const renderDetails = async () => {
     if (window.location.pathname == "/recipe.html") {
         const container = document.querySelector('.recipe__single');
-
         const res = await fetch('https://what-do-i-eat-today-api.herokuapp.com/recipes/' + getLocationId);
         if (!res.ok) {
             window.location.replace('/');
         }
         const recipe = await res.json();
-
+        console.log(recipe)
         let template = `<article class="recipe">
                     <header class="recipe__title flex">
                         <h3>${recipe.name}</h3>
