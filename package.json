@@ -7,10 +7,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "webpack --mode=production --node-env=production",
     "dev": "webpack --mode=development",
     "build": "webpack --mode=production --node-env=production",
-    "serve": "npx http-server ./dist",
+    "server": "npx http-server ./dist",
     "deploy": "gh-pages -d build",
     "lint": "lint"
   },

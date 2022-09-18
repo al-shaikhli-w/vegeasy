@@ -1,8 +1,7 @@
 const getLocationId = new URLSearchParams(window.location.search).get('id');
-console.log("in recipe.html text")
+const container = document.querySelector('.recipe__single');
+
 const renderDetails = async () => {
-    if (window.location.pathname == "/recipe.html") {
-        const container = document.querySelector('.recipe__single');
         const res = await fetch('https://what-do-i-eat-today-api.herokuapp.com/recipes/' + getLocationId);
         if (!res.ok) {
             window.location.replace('/');
@@ -29,12 +28,10 @@ const renderDetails = async () => {
                     </section>
                   
                   </article>`;
-
-        if (container) {
             container.innerHTML = template;
-        }
-    }
 }
 
 
-window.addEventListener('DOMContentLoaded', renderDetails);
+if (container) {
+    window.addEventListener('DOMContentLoaded', renderDetails);
+}
