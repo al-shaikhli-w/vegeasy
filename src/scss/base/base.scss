@@ -9,6 +9,30 @@ $red: #dc2626;
 $green: #16a34a;
 $purple: #9333ea;
 $transition: .5s;
+// Spacing
+$--spacing-s: 8px;
+$--spacing-m: 16px;
+$--spacing-l: 24px;
+$--spacing-xl: 32px;
+$--spacing-xxl: 64px;
+
+@mixin buttonStyle($textColor,$bgColor, $hoverColor, $hoverColorText){
+  border: 1px solid;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: .5s;
+  background: $bgColor;
+  color: $textColor;
+  &:hover{
+    background: $hoverColor;
+    color: $hoverColorText;
+  }
+}
+
 
 /* Small (sm) */
 @media (min-width: 640px) {

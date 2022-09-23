@@ -1,0 +1,16 @@
+form {
+  margin-top: 6rem;
+  input, textarea{
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+    background: $black;
+    border: 1px solid $slate-50;
+    color: $slate-50;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  textarea {
+    min-height: 10vh;
+  }
+}

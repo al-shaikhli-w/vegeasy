@@ -1,34 +1,84 @@
+.about {
+  &__title{
+    font-family: "Rampart One", cursive;
+    font-size: 4rem;
+    text-align: center;
+    margin: 3rem auto 4rem;
+  }
+  &__disc {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+}
 .recipes{
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: $--spacing-l;
+  grid-row-gap: $--spacing-l;
   width: 100%;
-  .recipe{
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 2rem;
-    border: 2px solid $slate-50;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
-    grid-gap: 1rem;
-    .recipe__title{
-      justify-content: space-between;
-      align-items: center;
-      height: 0;
-      margin: 1rem 0;
-      h3{
-        font-size: 1rem;
-        word-spacing: -5px;
-        text-align: left;
-      }
-      button svg {
-        text-align: right;
-      }
+  margin-top: $--spacing-xxl;
+  .card{
+    list-style: none;
+    position: relative;
+    &__background{
+      background-size: cover;
+      background-position: center;
+      border-radius: $--spacing-l;
+      bottom: 0;
+      filter: brightness(0.75) saturate(1.2) contrast(0.85);
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform-origin: center;
+      trsnsform: scale(1) translateZ(0);
+      transition:
+              filter 200ms linear,
+              transform 200ms linear;
+    }
+    &:hover &__background{
+      transform: scale(1.05) translateZ(0);
+    }
+    &__content{
+      left: 0;
+      padding: $--spacing-l;
+      position: absolute;
+      top: 0;
+    }
+    &:before{
+      content: '';
+      display: block;
+      padding-bottom: 150%;
+      width: 100%;
+    }
+    &__author{
+      color: $slate-50;
+      font-size: 0.9rem;
+      margin-bottom: $--spacing-s;
+      text-transform: uppercase;
+    }
+    &__heading{
+      color: $slate-50;
+      font-size: 1.9rem;
+      text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+      line-height: 1.4;
+      word-spacing: 100vw;
     }
   }
-  .recipe__footer{
-    display: flex;
-    justify-content: end;
-    align-items: end;
+  &:hover > .card:not(:hover) .card__background{
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+  }
+}
+
+@media(min-width: 540px){
+  .recipes{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 960px){
+  .recipes{
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

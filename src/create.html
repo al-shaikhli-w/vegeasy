@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VEGIZ 🌱 / create a recipe</title>
+    <meta name="description" content="We help you find your favorite food">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./image/favicon.ico">
+    <link rel="apple-touch-icon" href="./image/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="512x512" href="./image/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./image/android-chrome-192x192.png">
+    <link rel="stylesheet">
+</head>
+<body>
+<main class="main">
+    <custom-header></custom-header>
+    <section class="add-form container">
+        <form action="" id="create-recipe">
+<!--    TODO:input validation also in javaScript        -->
+            <input type="text" name="name" placeholder="recipe name" required >
+            <input type="text" name="author" placeholder="recipe author" required >
+            <input type="url" name="imageUrl" placeholder="recipe url" required pattern="https?://.+">
+            <textarea type="text" name="description" placeholder="description"></textarea>
+            <textarea name="ingredients" placeholder="Ingredients"></textarea>
+            <textarea name="method" placeholder="Method"></textarea>
+            <div id="form__messages ">
+                <p class="form__messages--error"></p>
+            </div>
+            <button class="btn btn__default btn--details">Create</button>
+        </form>
+    </section>
+</main>
+<custom-footer></custom-footer>
+</body>
+</html>

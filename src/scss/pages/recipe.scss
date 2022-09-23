@@ -6,3 +6,51 @@
     color: $red;
   }
 }
+
+.add2fav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  &__button {
+    @include buttonStyle($black, $slate-50, $purple, $slate-50)
+  }
+}
+
+.recipe{
+  &__body{
+    &__list {
+      .item {
+        margin-bottom: .5rem;
+        list-style: circle;
+      }
+    }
+    &__method {
+      .item {
+        margin-bottom: .5rem;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+footer {
+  .back2Home{
+    @include buttonStyle($slate-50, $purple, $black, $slate-50);
+    margin: 2rem auto;
+    max-width: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+/* Small (sm) */
+@media (min-width: 640px) {
+  .recipe{
+    &__title{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    }
+}
