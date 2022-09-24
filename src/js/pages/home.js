@@ -18,7 +18,7 @@ const renderRecipes = async () => {
                 <article class="card__background" style="background-image: url(${recipe.imageUrl ? recipe.imageUrl : "https://source.unsplash.com/random/300×300/?fruit"})"></article>
                 <div class="card__content">
                     <p class="card__author">${recipe.author}</p>
-                    <h3 class="card__heading">${recipe.name}</h3>
+                    <p class="card__heading">${recipe.name}</p>
                     <p class="content">${sliceDescription}</p>
                 </div>
             </a>      

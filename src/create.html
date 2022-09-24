@@ -20,15 +20,15 @@
         <form action="" id="create-recipe">
             <div class="form-controller">
                 <label for="name">Recipe name:</label>
-                <input id="name" type="text" name="name" placeholder="Recipe name" required>
+                <input id="name" type="text" name="name" placeholder="Recipe name" pattern="[a-zA-Z'-'\s]*" >
             </div>
             <div class="form-controller">
                 <label for="author">Recipe author:</label>
-                <input id="author" type="text" name="author" placeholder="Recipe author" required >
+                <input id="author" type="text" name="author" placeholder="Recipe author" pattern="[a-zA-Z'-'\s]*" >
             </div>
             <div class="form-controller">
                 <label for="imageUrl">Recipe image url:</label>
-                <input id="imageUrl" type="url" name="imageUrl" placeholder="Recipe image url" required pattern="https?://.+">
+                <input id="imageUrl" type="url" name="imageUrl" placeholder="Recipe image url"  pattern="https?://.+">
             </div>
             <div class="form-controller">
                 <label for="description">Recipe description:</label>
@@ -42,10 +42,8 @@
                 <label for="method">Recipe Method:</label>
                 <textarea id="method" name="method" placeholder="Method"></textarea>
             </div>
-            <div id="form__messages ">
-                <p class="form__messages--error"></p>
-            </div>
-            <button type="submit" class="btn btn__default btn--details">Crate a vegeasy</button>
+            <div id="form__messages"></div>
+            <button id="form__submit" type="submit" class="btn btn__default btn--details" disabled>Crate a vegeasy</button>
         </form>
     </section>
 </main>

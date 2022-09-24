@@ -30,7 +30,16 @@
     min-height: 10vh;
   }
 }
-
+button:disabled,
+button[disabled]{
+  cursor: not-allowed;
+}
+#form__messages {
+  color: red;
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
 @media (min-width: 640px) {
   #create-recipe {
     max-width: 500px;
