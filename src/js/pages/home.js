@@ -3,7 +3,6 @@ import {realPath} from "../global/path";
 const loader = document.querySelector('#loader');
 const container = document.querySelector('.recipes');
 
-
 const renderRecipes = async () => {
     let uri = 'https://what-do-i-eat-today-api.herokuapp.com/recipes?_sort=Name&_order=asc';
     const res = await fetch(uri);

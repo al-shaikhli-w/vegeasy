@@ -1,3 +1,4 @@
+import {realPath} from "../global/path";
 const form = document.getElementById('create-recipe');
 
 if ( form){
@@ -16,8 +17,8 @@ if ( form){
             body: JSON.stringify(doc),
             headers: { 'Content-Type': 'application/json' }
         });
-        alert("jahu you have new recipe :)");
-        window.location.replace('/whatDoEatToday')
+        alert("Oahu you have new recipe :)");
+        window.location.replace(realPath);
     });
 }
 

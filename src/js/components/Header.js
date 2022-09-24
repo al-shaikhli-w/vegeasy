@@ -7,7 +7,7 @@ class Header extends HTMLElement {
                     <div class="header__container">
                          <div class="header__logo">
                             <a href="${realPath}" target="_self" class="logo_container">
-                                <img src="./image/apple-touch-icon.png" width="180" height="180">
+                                <img src="./image/apple-touch-icon.png" width="180" height="180" alt="logo">
                              </a>
                          </div>
                         <nav class="header__navbar flex">

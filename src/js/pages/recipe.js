@@ -1,3 +1,5 @@
+import {realPath} from "../global/path";
+
 const getLocationId = new URLSearchParams(window.location.search).get('id');
 const container = document.querySelector('.recipe__single');
 const renderDetails = async () => {
@@ -6,7 +8,7 @@ const renderDetails = async () => {
         window.location.replace(realPath);
     }
     const recipe = await res.json();
-    let template = `<article class="recipe">
+    container.innerHTML = `<article class="recipe">
                     <header class="recipe__header" style="background-image: url(${recipe.imageUrl ? recipe.imageUrl : "https://source.unsplash.com/random/300×300/?fruit"})">
                         <h3 class="title">${recipe.name}</h3>
                         <h4 class="author">Image by: ${recipe.author}</h4>
@@ -17,7 +19,6 @@ const renderDetails = async () => {
                             <path fill="#fff" d="M1634.6,50.1c-193.8,11.9-366.9,24.9-569,50c-110.2,13.7-221.2,21.5-332.3,19.6 c-187-3.3-344.5-29.7-560.9-69.8c-122.2-22.6-172.8-4-172.8-4V130h1998V46C1997.5,46,1831,38.1,1634.6,50.1z"></path>
                         </svg>
                     </header>
-                    
                     <main class="recipe__body container" >
                         <div class="recipe__body__description">
                             <h3 class="uppercase">description</h3>
@@ -35,7 +36,6 @@ const renderDetails = async () => {
                         </div>
                     </main>
                   </article>`;
-    container.innerHTML = template;
 }
 
 

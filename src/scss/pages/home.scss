@@ -70,8 +70,6 @@
   }
 }
 
-
-/* Small (sm) */
 @media (min-width: 640px) {
   .recipes{
     display: grid;
@@ -84,14 +82,12 @@
   }
 }
 
-/* Large (lg) */
 @media (min-width: 1024px) {
   .recipes{
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Extra Large (xl) */
 @media (min-width: 1280px) {
   .recipes{
     grid-template-columns: repeat(4, 1fr);

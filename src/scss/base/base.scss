@@ -32,25 +32,21 @@ $--spacing-xxl: 64px;
     color: $hoverColorText;
   }
 }
-
-
-/* Small (sm) */
-@media (min-width: 640px) {
-
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Medium (md) */
-@media (min-width: 768px) {
-
+body {
+  font-family: 'Roboto Mono', monospace;
+  background: $slate;
+  color: $slate-50;
+  height: 100%;
+}
+.main {
+  padding-top: 5rem;
 }
 
-/* Large (lg) */
-@media (min-width: 1024px) {
-
-}
-
-/* Extra Large (xl) */
-@media (min-width: 1280px) {
-
-}
 

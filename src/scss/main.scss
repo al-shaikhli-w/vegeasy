@@ -1,10 +1,9 @@
 // import base style
 @import "./base/base";
-// import global style
-@import "./base/global";
 
 // import utilities style
 @import "./utilities/utilities";
+
 // import the components styles
 @import "./components/header";
 @import "./components/about";
