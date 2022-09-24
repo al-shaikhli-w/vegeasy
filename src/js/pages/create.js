@@ -27,12 +27,10 @@ if (form){
             formMessages.innerHTML = `<p style="color: #16a34a">✅ Author is Valid</p>`;
             formSubmitBtn.removeAttribute("disabled");
         }
-    })
-
+    });
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
-
         const doc = {
             name: form.name.value.toString().trim(),
             author: form.author.value.toString().trim(),
@@ -46,7 +44,7 @@ if (form){
             body: JSON.stringify(doc),
             headers: { 'Content-Type': 'application/json' }
         });
-        alert("Oahu you have new recipe :)");
+        alert("Oahu you have new vegeasy :)");
         window.location.replace(realPath);
     });
 }
