@@ -27,7 +27,8 @@
       text-decoration: none;
       transition: .3s;
     &:hover {
-      color: $green;
+      color: $slate-50;
+      border-bottom: 1px solid;
     }
     }
   }

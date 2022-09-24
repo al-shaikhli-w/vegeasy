@@ -16,31 +16,67 @@
   }
 }
 
-.recipe{
-  &__body{
-    &__list {
-      .item {
-        margin-bottom: .5rem;
-        list-style: circle;
-      }
+.recipe {
+  overflow: hidden;
+  margin-top: -20px;
+  &__header{
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position-y: center;
+    height: calc(100vh - 30px);
+    max-height: 500px;
+    margin-bottom: 70px;
+
+    h3 {
+      position: absolute;
+      top: 40%;
+      left: 20%;
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-family: "Rampart One", cursive;
     }
-    &__method {
-      .item {
-        margin-bottom: .5rem;
-        text-align: justify;
+    h4 {
+      position: absolute;
+      top: 57%;
+      left: 20%;
+      font-size: 1rem;
+    }
+    svg {
+      position: absolute;
+      width: 100%;
+      overflow: hidden;
+      left: 0;
+      right: 0;
+      bottom: -53px;
+    }
+    &:before {
+      content: '';
+      background: #54545470;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__body {
+    margin: 1rem auto 3rem;
+    &__description, &__ingredients, &__method{
+      margin-bottom: 2rem;
+      h3 {
+        font-family: "Rampart One", cursive;
+        font-size: 1.8rem;
+        margin: 1.2rem 0 1.8rem;
       }
     }
   }
 }
 
-footer {
-  .back2Home{
-    @include buttonStyle($slate-50, $purple, $black, $slate-50);
-    margin: 2rem auto;
-    max-width: 200px;
-    justify-content: center;
-    align-items: center;
-  }
+.back2Home{
+  @include buttonStyle($slate-50, $purple, $black, $slate-50);
+  margin: 2rem auto;
+  max-width: 200px;
+  justify-content: center;
 }
 
 
@@ -53,4 +89,23 @@ footer {
       align-items: center;
     }
     }
+  .recipe__header{
+    h3 {
+      font-size: 2.5rem;
+    }
+    h4 {
+      top: 65%;
+      font-size: 1.5rem;
+    }
+    svg{
+      bottom: -35px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .recipe{
+    svg{
+      bottom: -17px;
+    }
+  }
 }

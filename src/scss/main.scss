@@ -7,8 +7,10 @@
 @import "./utilities/utilities";
 // import the components styles
 @import "./components/header";
+@import "./components/about";
 @import "./components/form";
 @import "./components/footer";
+@import "./components/loader";
 
 // import pages
 @import "./pages/home";
