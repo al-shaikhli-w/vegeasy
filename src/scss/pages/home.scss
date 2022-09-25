@@ -53,22 +53,10 @@
       word-spacing: 100vw;
     }
   }
-  &:hover > .card:not(:hover) .card__background{
-    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
-  }
+
 }
 
-@media(min-width: 540px){
-  .recipes{
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media(min-width: 960px){
-  .recipes{
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
 @media (min-width: 640px) {
   .recipes{
@@ -91,5 +79,8 @@
 @media (min-width: 1280px) {
   .recipes{
     grid-template-columns: repeat(4, 1fr);
+    &:hover > .card:not(:hover) .card__background{
+      filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+    }
   }
 }
